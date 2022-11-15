@@ -61,7 +61,7 @@
                         <manifest>
                             <addClasspath>true</addClasspath>
                             <!-- This is main class of your program which will be executed-->
-                            <mainClass>{{this.is.your.qualified.name.of.main.class}}</mainClass>
+                            <mainClass>org.navi.mymoney.MyMoneyApplication</mainClass>
                         </manifest>
                     </archive>
                 </configuration>
