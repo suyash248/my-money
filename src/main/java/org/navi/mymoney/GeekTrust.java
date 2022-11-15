@@ -1,5 +1,6 @@
 package org.navi.mymoney;
 
+import org.springframework.boot.Banner;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -8,16 +9,18 @@ import java.util.InputMismatchException;
 import java.util.List;
 
 @SpringBootApplication
-public class MyMoneyApplication implements CommandLineRunner {
+public class GeekTrust implements CommandLineRunner {
 
     final Driver driver;
 
-    public MyMoneyApplication(Driver driver) {
+    public GeekTrust(Driver driver) {
         this.driver = driver;
     }
 
     public static void main(String[] args) {
-        SpringApplication.run(MyMoneyApplication.class, args);
+        SpringApplication app = new SpringApplication(GeekTrust.class);
+        app.setBannerMode(Banner.Mode.OFF);
+        app.run(args);
     }
 
     @Override
